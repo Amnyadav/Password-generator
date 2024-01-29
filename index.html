@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password generator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="heading">Password generator</h1>
+
+        <!-- screen -->
+        <div class="display-screen">
+            <input readonly placeholder="password" class="display">
+            <button class="copy-button">
+                <span class="tool-tip" data-copyMsg>copied</span>
+                <img src="./images/copy.svg" alt="" loading="lazy" width="23"
+                height="23" data-copyImg>
+            </button>
+        </div>
+
+        <!-- main box -->
+        <div class="main-box">
+
+            <!-- slider -->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-length>0</p>
+            </div>
+            <div>
+                <input type="range" min="1" max="20" class="slider" step="1" data-slider>
+            </div>
+
+            <!-- checkboxes -->
+            <div class="check-boxe-container">
+                <div class="check-box">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">include uppercase letters</label>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">include lowercase letters</label>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="number">
+                    <label for="number">include numbers</label>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox"  id="symbols">
+                    <label for="symbols">include symbols</label>
+                </div>
+            </div>
+
+            <!-- strength -->
+            <div class="strength">
+                <p>Strength</p>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="red" />
+                </svg> -->
+                <div data-indicator></div>
+            </div>
+
+            <!-- button -->
+            <button class="generate-button">
+                Generate Password
+            </button>
+        </div>
+    </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
